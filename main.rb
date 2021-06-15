@@ -21,7 +21,6 @@ if code == "139786"
    if key1 =="{}"
     puts "The door opens."
     puts "You Have Escaped!"
-    puts "More rooms coming soon!"
     points = 1
     puts "You have completed the tutorial! As a result, you have earned a point. You will unlock other rooms with points. Every room you beat you will earn a point. When you lose, your points will act as your high score."
    else
@@ -56,6 +55,7 @@ if points == 1
         puts "You Have Escaped!"
         points = 2
         puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+        puts "More rooms coming soon!"
       else
         puts "You dont use the key."
         puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
