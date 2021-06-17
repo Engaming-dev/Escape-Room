@@ -26,8 +26,9 @@ if code == "139786"
    else
      puts "The key did not work."
    end
-  elsif answer == "No" 
-    "Ok. You didnt try."
+  else
+    puts "You didnt try to open the door."
+    puts "your score: 0. if you havent made it further, you can publish this as a high score!"
   end
 else 
   puts "ACCESS DENIED. CODE INCORRECT."
