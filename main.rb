@@ -55,8 +55,6 @@ if points == 1
         puts "The door opens."
         puts "You Have Escaped!"
         points = 2
-        puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
-        puts "More rooms coming soon!"
       else
         puts "You dont use the key."
         puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
@@ -65,4 +63,51 @@ if points == 1
     puts "You dont inspect the room, and remain clueless."
     puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"  
   end
+end 
+if points == 2
+  puts "     ------ROOM 3------     "
+  puts "You inspect for more clues."
+  puts "You find nothing. Where to inspect more?"
+  puts "The kitchen or under the TV?"
+  answer = gets.chomp.downcase
+  if answer == "tv"
+    puts "You inspect the tv, and find something!"
+    puts "Check the kitchen, And you will find nothing, but going to the balcony, you 'wont' find anything."
+    puts "Where should we check? the balcony or the kitchen?"
+    answer = gets.chomp.downcase
+    if answer == "balcony"
+      puts "Look!"
+      puts "You found something!"
+      puts "The TIME: 15:67"
+      puts "Hmmm..."
+      puts "Do you want to type in the code?"
+      answer = gets.chomp.downcase
+      if answer == "yes"
+        puts "ENTER CODE:"
+        code = gets.chomp
+        if code == "1567"
+          puts "You Escaped!"
+          puts "Not all rooms need a key to escape."
+          points = 3
+          puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+          puts "More rooms coming soon!"
+        else
+          puts "ACCESS DENIED. CODE INCORRECT."
+          puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+        end
+      else
+        puts "You dont try and look for clues."
+        puts "You dont find any clues."
+        puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+      end
+    else
+      puts "You found nothing."
+      puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+    end
+  else
+   puts "You inspect the kitchen, but find nothing."
+   puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+  end
+else
+  puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
 end end
