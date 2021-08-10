@@ -107,8 +107,6 @@ if points == 2
           sleep 2
           puts "Not all rooms need a key to escape."
           points = 3
-          puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
-          puts "More rooms coming soon!"
         else
           puts "ACCESS DENIED. CODE INCORRECT."
           puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
@@ -129,3 +127,49 @@ if points == 2
 else
   puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
 end 
+if points == 3
+  puts "          -------ROOM 4-------           "
+  sleep 2
+  puts "You inspect the keyhole."
+  sleep 1
+  puts "-----> {'}"
+  sleep 1
+  puts "Where to search? The bedroom or bathroom?"
+  answer = gets.chomp.downcase
+  if answer == "kitchen"
+    puts "You inspect the kitchen, and find a key!"
+    puts "It works for this keyhole: {:}"
+    sleep 2
+    puts "Keep the key for further use?"
+    puts "Keys can be kept and used in other levels, if the key's keyhole doesnt match the level's door."
+    answer = gets.chomp.downcase
+    if answer == "yes"
+      key1 = "{:}"
+    end
+    puts "Now, should we go to the bathroom or the living room?"
+    answer = gets.chomp.downcase
+    if answer == "bathroom"
+      puts "You find nothing in the bathroom."
+      puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+    else
+      puts "You find a note in the living room!"
+      puts "The first of july, the last of october, the beginning of the winter."
+      sleep 3
+      puts "Now enter the code:"
+      code = gets.chomp.to_i
+      if code == 1731102112 || 7110311221
+        puts "ACCESS GRANTED." 
+        puts "You escaped!"
+        sleep 2
+        puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+        puts "More rooms coming soon!"
+      else 
+        puts "ACCESS DENIED. CODE INCORRECT."
+        puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+      end
+    end
+  else
+    puts "You find nothing in the bathroom."
+    puts "Your score: #{points}. If you havent made it farther, you can publish this as a high score!"
+  end
+end
